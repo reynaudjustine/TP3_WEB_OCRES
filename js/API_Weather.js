@@ -9,6 +9,7 @@ const API_URL_ICON = "http://openweathermap.org/img/wn/";
 
 const API_URL_16_DAYS="https://api.openweathermap.org/data/2.5/forecast/daily";
 
+
 class API_WEATHER{
   constructor(city){
     // Si la ville n'est pas définit alors la ville par défault est Paris
@@ -32,11 +33,12 @@ class API_WEATHER{
   }
 
 
-  getThreeDayForecast(){
+  fetchThreeDaysForecast(){
     return axios
-    .get(`${API_URL_16_DAYS}?q=${this.city}&cnt=3&units=metric&appid=${API_KEY}`, {
+   .get(`${API_URL_16_DAYS}?q=${this.city}&units=metric&cnt=4&appid=${API_KEY}`, {
       crossdomain: true
     })
+    
   }
 
 }
