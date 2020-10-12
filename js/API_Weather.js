@@ -13,7 +13,8 @@ const API_URL_16_DAYS="https://api.openweathermap.org/data/2.5/forecast/daily";
 class API_WEATHER{
   constructor(city){
     // Si la ville n'est pas définit alors la ville par défault est Paris
-    if(city === undefined){
+    if(city === undefined)
+    {
       city = "paris";
     }
     this.city = city;
